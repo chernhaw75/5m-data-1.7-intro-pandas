@@ -15,6 +15,7 @@ Question: Select all numeric columns except float from the DataFrame `dft`.
 Answer:
 
 ```python
+dft.select_dtypes(include=['int'])
 
 ```
 
@@ -25,7 +26,7 @@ Question: How do you return the last 3 rows of a DataFrame `df`?
 Answer:
 
 ```python
-
+df.tail(3)
 ```
 
 ### Question 3
@@ -35,6 +36,8 @@ Question: Return the minimum and maximum of a Series `x` as a new Series with th
 Answer:
 
 ```python
+min_value = x.min()
+max_value = x.max()
 
 ```
 
@@ -45,7 +48,7 @@ Question: Multiply `df1` and `df2` (two DataFrames) with a `fill_value` of 1.
 Answer:
 
 ```python
-
+df1.mul(df2, fill_value=1)
 ```
 
 ### Question 5
@@ -60,6 +63,7 @@ Answer:
 
 ```python
 
+df =pd.DataFrame(nested_dict)
 ```
 
 ## Submission
